@@ -4,28 +4,32 @@ import { ExternalLink, Github } from 'lucide-react';
 const Portfolio: React.FC = () => {
   const projects = [
     {
+      title: "Vredekloof Car Wash & Valet",
+      category: "Local Business & SEO",
+      image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=800",
+      description: "A professional, mobile-responsive business website featuring automated contact forms, Google Review integration, and a direct WhatsApp booking system.",
+      url: "https://vredekloofcarwash.brandsitebuilder.net"
+    },
+    {
       title: "Neon E-Commerce",
       category: "Web Development",
       image: "https://picsum.photos/800/600?random=1",
-      description: "A high-performance e-commerce platform with real-time inventory and AI recommendations."
+      description: "A high-performance e-commerce platform with real-time inventory and AI recommendations.",
+      url: "#"
     },
     {
       title: "FinTech Dashboard",
       category: "UI/UX Design",
       image: "https://picsum.photos/800/600?random=2",
-      description: "Clean, data-heavy dashboard for a financial startup focusing on clarity and speed."
+      description: "Clean, data-heavy dashboard for a financial startup focusing on clarity and speed.",
+      url: "#"
     },
     {
       title: "Luxury Estate",
       category: "Branding & Web",
       image: "https://picsum.photos/800/600?random=3",
-      description: "Immersive experience for a luxury real estate agency featuring virtual tours."
-    },
-    {
-      title: "Health Tracker App",
-      category: "Mobile Web",
-      image: "https://picsum.photos/800/600?random=4",
-      description: "PWA designed for tracking daily fitness goals with social sharing features."
+      description: "Immersive experience for a luxury real estate agency featuring virtual tours.",
+      url: "#"
     }
   ];
 
@@ -63,9 +67,15 @@ const Portfolio: React.FC = () => {
                   {project.description}
                 </p>
                 <div className="flex gap-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-200">
-                  <button className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white backdrop-blur-md transition-colors">
+                  <a 
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white backdrop-blur-md transition-colors flex items-center justify-center"
+                    aria-label="Visit Site"
+                  >
                     <ExternalLink className="w-5 h-5" />
-                  </button>
+                  </a>
                   <button className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white backdrop-blur-md transition-colors">
                     <Github className="w-5 h-5" />
                   </button>
