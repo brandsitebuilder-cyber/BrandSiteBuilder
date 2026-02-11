@@ -5,6 +5,7 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import QuoteForm from './components/QuoteForm';
 import Footer from './components/Footer';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <QuoteForm />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
