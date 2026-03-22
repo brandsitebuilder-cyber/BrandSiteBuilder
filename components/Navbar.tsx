@@ -14,21 +14,21 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'About', href: '#about' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Portfolio', href: '/#portfolio' },
+    { name: 'About', href: '/#about' },
   ];
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <a href="/" className="flex items-center space-x-2">
             <Rocket className="h-8 w-8 text-brand-cyan" />
             <span className="font-display font-bold text-2xl tracking-tight text-white">
               BrandSite<span className="text-brand-purple">Builder</span>
             </span>
-          </div>
+          </a>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 className="bg-brand-purple hover:bg-violet-600 text-white px-6 py-2 rounded-full font-semibold transition-all shadow-[0_0_15px_rgba(124,58,237,0.5)] hover:shadow-[0_0_25px_rgba(124,58,237,0.7)]"
               >
                 Get a Quote
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center mt-4 bg-brand-purple text-white px-6 py-3 rounded-lg font-bold"
             >

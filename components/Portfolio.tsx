@@ -1,37 +1,10 @@
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { projects } from '../data/projects';
 
 const Portfolio: React.FC = () => {
-  const projects = [
-    {
-      title: "Vredekloof Car Wash & Valet",
-      category: "Local Business & SEO",
-      image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=800",
-      description: "A professional, mobile-responsive business website featuring automated contact forms, Google Review integration, and a direct WhatsApp booking system.",
-      url: "https://vredekloofcarwash.brandsitebuilder.net"
-    },
-    {
-      title: "Neon E-Commerce",
-      category: "Web Development",
-      image: "https://picsum.photos/800/600?random=1",
-      description: "A high-performance e-commerce platform with real-time inventory and AI recommendations.",
-      url: "#"
-    },
-    {
-      title: "FinTech Dashboard",
-      category: "UI/UX Design",
-      image: "https://picsum.photos/800/600?random=2",
-      description: "Clean, data-heavy dashboard for a financial startup focusing on clarity and speed.",
-      url: "#"
-    },
-    {
-      title: "Luxury Estate",
-      category: "Branding & Web",
-      image: "https://picsum.photos/800/600?random=3",
-      description: "Immersive experience for a luxury real estate agency featuring virtual tours.",
-      url: "#"
-    }
-  ];
+  const featuredProjects = projects.slice(0, 4);
 
   return (
     <section id="portfolio" className="py-24 relative">
@@ -41,19 +14,20 @@ const Portfolio: React.FC = () => {
             <h2 className="text-brand-cyan font-semibold tracking-wider uppercase mb-2">Selected Works</h2>
             <h3 className="text-3xl md:text-5xl font-display font-bold text-white">Featured Projects</h3>
           </div>
-          <button className="mt-4 md:mt-0 text-white border-b border-brand-purple hover:text-brand-purple transition-colors pb-1">
+          <Link to="/projects" className="mt-4 md:mt-0 text-white border-b border-brand-purple hover:text-brand-purple transition-colors pb-1">
             View All Projects
-          </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <div key={index} className="group relative rounded-2xl overflow-hidden glass-card hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-500">
               <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -76,9 +50,6 @@ const Portfolio: React.FC = () => {
                   >
                     <ExternalLink className="w-5 h-5" />
                   </a>
-                  <button className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white backdrop-blur-md transition-colors">
-                    <Github className="w-5 h-5" />
-                  </button>
                 </div>
               </div>
             </div>

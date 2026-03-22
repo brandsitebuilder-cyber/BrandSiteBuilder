@@ -29,14 +29,14 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <a
-            href="#contact"
+            href="/#contact"
             className="w-full sm:w-auto px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2 group"
           >
             Start Your Project
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
-            href="#portfolio"
+            href="/#portfolio"
             className="w-full sm:w-auto px-8 py-4 glass-card rounded-full font-bold text-lg text-white hover:bg-white/10 transition-colors"
           >
             View Our Work
