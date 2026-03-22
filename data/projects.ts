@@ -30,7 +30,7 @@ export const projects = [
   {
     title: "Louis’ Mobile Workshop",
     category: "Mobile Services",
-    image: "https://picsum.photos/seed/mechanic/800/450",
+    image: "https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&q=80&w=800",
     description: "A clean, mobile-responsive site for a mobile mechanic service. Architected specifically for users on the go, ensuring fast load times and easy access to services.",
     url: "https://louis-workshop.vercel.app/"
   }
